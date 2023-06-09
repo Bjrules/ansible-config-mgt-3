@@ -10,14 +10,6 @@
       }
     }
 
-    stage('Test') {
-      steps {
-        script {
-          sh 'echo "Testing Stage"'
-        }
-      }
-    }
-
     stage('Package') {
       steps {
         script {
@@ -34,6 +26,14 @@
       }
     }
 
+ stage('Test') {
+      steps {
+        script {
+          sh 'echo "Testing Stage"'
+        }
+      }
+    }
+    
     stage('Clean Up') {
       steps {
         script {
