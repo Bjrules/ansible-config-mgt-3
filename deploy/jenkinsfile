@@ -17,6 +17,14 @@
         }
       }
     }
+    
+    stage('Test') {
+      steps {
+        script {
+          sh 'echo "Testing Stage"'
+        }
+      }
+    }
 
     stage('Deploy') {
       steps {
@@ -26,14 +34,6 @@
       }
     }
 
- stage('Test') {
-      steps {
-        script {
-          sh 'echo "Testing Stage"'
-        }
-      }
-    }
-    
     stage('Clean Up') {
       steps {
         script {
