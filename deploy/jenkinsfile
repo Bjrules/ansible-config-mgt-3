@@ -1,13 +1,7 @@
 pipeline {
     agent any
-    stage("Initial cleanup") {       
-            dir("${WORKSPACE}") {
-              deleteDir()
-          
-          }
-        }
-    stages{
-      stage('Build') {
+     stages{
+       stage('Build') {
         steps {
           script {
             sh 'echo "BUilders"'
