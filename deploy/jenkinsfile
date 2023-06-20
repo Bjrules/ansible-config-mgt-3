@@ -2,13 +2,13 @@ pipeline {
     agent any
 
   stages {
-    stage('Initial Cleanup') {
-      steps {
-        dir("${WORKSPACE}") { 
-          deleteDir()
-        }
-      }
-    }
+    // stage('Initial Cleanup') {
+    //   steps {
+    //     dir("${WORKSPACE}") { 
+    //       deleteDir()
+    //     }
+    //   }
+    // }
     stage('Build') {
       steps {
         script {
