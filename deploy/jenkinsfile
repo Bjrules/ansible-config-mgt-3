@@ -1,11 +1,20 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('SCM Checkout'){
-          steps{
-              
-          }
-        }
 
+  stages {
+    stage('Initial Cleanup') {
+      steps {
+        dir("${WORKSPACE}") { 
+          deleteDir()
+        }
+      }
+    }
+    stage('Build') {
+      steps {
+        script {
+          sh 'echo "Building Stage"'
+        }
+      }
+    }
     }
 }
