@@ -1,27 +1,18 @@
-pipeline {
-    agent any
-     stages{
-
-      // stage("Initial cleanup") {
-      //     steps {
-      //       dir("${WORKSPACE}") {
-      //         deleteDir()
-      //       }
-      //     }
-      //   }
-    stage('Build') {
-        steps {
-          script {
-            sh 'echo "BUilders"'
-        }
-      }
-    }
-    stage('Cleanup') {
-      steps {
-          cleanWs()
-        
-      }
+pipeline{
+  agent any
+  
+  environment {
+      ANSIBLE_CONFIG="${WORKSPACE}/deploy/ansible.cfg"
     }
     
+    stages{
+      stage("Initial cleanup") {
+          steps {
+            dir("${WORKSPACE}") {
+              deleteDir()
+            }
+          }
+        }
+
     }
 }
