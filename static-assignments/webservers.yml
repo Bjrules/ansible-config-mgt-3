@@ -1,4 +1,4 @@
 ---
-- hosts: Nginx
+- hosts: nginxRole
   roles:
     - nginxRole
