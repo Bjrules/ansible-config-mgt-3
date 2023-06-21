@@ -14,5 +14,29 @@ pipeline{
           }
         }
 
-    }
+      stage('Checkout SCM') {
+         steps{
+            git branch: 'jenkinspipeline-stages', url: 'https://github.com/Bjrules/ansible-config-mgt-3.git'
+         }
+       }
+
+      stage('Prepare Ansible For Execution') {
+        steps {
+          sh 'echo ${WORKSPACE}' 
+          sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'  
+        }
+     }
+
+      stage('Run Ansible playbook') {
+        steps {
+           ansiblePlaybook become: true, colorized: true, credentialsId: 'My-ec2-user-Key', disableHostKeyChecking: true, installation: 'COME-BACK-JENKINS-ANSIBLE', inventory: 'inventory/dev', playbook: 'playbooks/site.yml'
+         }
+      }
+
+      stage('Clean Workspace after build'){
+        steps{
+          cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, deleteDirs: true)
+        }
+      }
+   }
 }
