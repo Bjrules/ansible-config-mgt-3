@@ -1,4 +1,4 @@
 ---
-- host: Artifactory
-    roles:
-      - artifactoryRole
+- hosts: Artifactory
+  roles:
+    - artifactoryRole
