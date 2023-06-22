@@ -3,7 +3,7 @@
 # or sudo access
 # mysql_user_home: /home/ec2-user
 mysql_user_name: ec2-user
-mysql_user_password: 
+mysql_user_password:
 
 # The default root user installed by mysql - almost always root
 mysql_root_home: /root
