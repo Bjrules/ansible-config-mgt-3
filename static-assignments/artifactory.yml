@@ -1,4 +1,4 @@
 ---
-- host: My-Artifactory
+- host: Artifactory
     roles:
       - artifactoryRole
