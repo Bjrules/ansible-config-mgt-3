@@ -7,4 +7,4 @@
   collections:
     - community.general
   roles:
-    - artifactoryRole
+    - artifactory
