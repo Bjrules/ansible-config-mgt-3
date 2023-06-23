@@ -1,4 +1,10 @@
 ---
+# - hosts: Artifactory
+#   roles:
+#     - artifactoryRole
+
 - hosts: Artifactory
+  collections:
+    - community.general
   roles:
     - artifactoryRole
