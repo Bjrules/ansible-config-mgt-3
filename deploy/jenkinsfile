@@ -33,7 +33,7 @@ pipeline{
 
       stage('Run Ansible playbook') {
         steps {
-           ansiblePlaybook become: true, colorized: true, credentialsId: 'My-ec2-user-Key', disableHostKeyChecking: true, installation: 'COME-BACK-JENKINS-ANSIBLE', inventory: '${inventory}', playbook: 'playbooks/site.yml'
+           ansiblePlaybook become: true, colorized: true, credentialsId: 'My-ec2-user-Key', disableHostKeyChecking: true, installation: 'COME-BACK-JENKINS-ANSIBLE', inventory: 'inventory/${inventory}', playbook: 'playbooks/site.yml'
          }
       }
 
