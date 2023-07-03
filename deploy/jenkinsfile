@@ -33,7 +33,7 @@ pipeline{
 
       stage('Run Ansible playbook') {
         steps {
-           ansiblePlaybook credentialsId: 'SSH-TO-CI', disableHostKeyChecking: true, installation: 'Ansible-Jenkins-Prj14', inventory: 'inventory/ci.yml', playbook: 'playbooks/site.yml'
+           ansiblePlaybook credentialsId: 'SSH-TO-CI', disableHostKeyChecking: true, installation: 'Ansible-Jenkins-Prj14', inventory: 'inventory/${inventory}', playbook: 'playbooks/site.yml'
          }
       }
 
