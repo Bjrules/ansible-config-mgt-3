@@ -2,4 +2,4 @@
 - hosts: Artifactory
   become: true
   roles:
-    - artifactoryRole
+    - artifactoryy
