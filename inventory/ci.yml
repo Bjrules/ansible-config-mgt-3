@@ -1,2 +1,2 @@
 [Artifactory]
-172.31.83.41 ansible_ssh_user='ec2-user'
+44.207.1.235 ansible_ssh_user='ec2-user'
