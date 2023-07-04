@@ -164,7 +164,7 @@ On Ubuntu, the package names are named differently, so the `mysql_package` varia
       - mariadb-server
       - python-mysqldb
 
-## Dependencies
+## Dependencies....
 
 None.
 
