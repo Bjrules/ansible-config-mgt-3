@@ -1,8 +1,8 @@
 ---
 # - hosts: all
 
-# - name: Artifactory-Jfrog
-#   import_playbook: ../static-assignments/artifactory.yml
+- name: Artifactory-Jfrog
+  import_playbook: ../static-assignments/artifactory.yml
 
 # - name: webserver
 #   import_playbook: ../static-assignments/webservers.yml
