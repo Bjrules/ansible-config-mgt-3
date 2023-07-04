@@ -33,7 +33,7 @@ pipeline{
 
       stage('Run Ansible playbook') {
         steps {
-           ansiblePlaybook become: true, credentialsId: 'SSH-CREDENTIALS', disableHostKeyChecking: true, installation: 'Jenkins-Ansible-Engine', inventory: 'inventory/${WORKSPACE}', playbook: 'playbooks/site.yml'
+           ansiblePlaybook become: true, credentialsId: 'SSH-CREDENTIALS', disableHostKeyChecking: true, installation: 'Jenkins-Ansible-Engine', inventory: 'inventory/${inventory}', playbook: 'playbooks/site.yml'
          }
       }
 
