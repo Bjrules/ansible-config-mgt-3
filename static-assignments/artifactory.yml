@@ -1,5 +1,4 @@
 ---
 - hosts: Artifactory
-  become: true
   roles:
     - artifactory
