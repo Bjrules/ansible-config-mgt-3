@@ -4,4 +4,4 @@
 
  ### At this point in project 14 CI/CD beginnig of devops core.
 1. Repo name: Bjrules/ansible-config-mgt-3
-2. Branch: jenkinspipeline-stages.
+2. Branch: jenkinspipeline-stages..
