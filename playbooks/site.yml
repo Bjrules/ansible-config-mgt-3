@@ -6,9 +6,12 @@
 
 # - name: webserver
 #   import_playbook: ../static-assignments/webservers.yml
+- name: Todo-Server
+  import_playbook: ../static-assignments/databasedeployment.yml
 
-- name: database-Mysql
-  import_playbook: ../static-assignments/database.yml
+
+# - name: database-Mysql
+#   import_playbook: ../static-assignments/database.yml
 
 # - name: Include dynamic variables
 #   import_playbook: ../static-assignments/common.yml

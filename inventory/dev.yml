@@ -4,6 +4,9 @@
 [db]
 172.31.94.39 ansible_ssh_user='ec2-user' 
 
+[Todo]
+172.31.90.189 ansible_ssh_user='ec2-user' 
+
 # [webservers]
 # 172.31.53.252 ansible_ssh_user='ec2-user'
 # 172.31.62.224 ansible_ssh_user='ec2-user'
