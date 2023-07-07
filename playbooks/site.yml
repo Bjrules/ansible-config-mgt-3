@@ -7,7 +7,7 @@
 # - name: webserver
 #   import_playbook: ../static-assignments/webservers.yml
 - name: Todo-Server
-  import_playbook: ../static-assignments/databasedeployment.yml
+  import_playbook: ../static-assignments/deployment.yml
 
 
 # - name: database-Mysql
