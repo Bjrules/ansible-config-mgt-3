@@ -6,9 +6,12 @@
 
 # - name: webserver
 #   import_playbook: ../static-assignments/webservers.yml
-- name: Todo-Server
-  import_playbook: ../static-assignments/deployment.yml
+# - name: Todo-Server
+#   import_playbook: ../static-assignments/deployment.yml
 
+
+ - name: SonarQube
+   import_playbook: ../static-assignments/sonar.yml
 
 # - name: database-Mysql
 #   import_playbook: ../static-assignments/database.yml
